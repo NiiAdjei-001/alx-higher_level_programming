@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 if __name__ == "__main__":
-    from sys import argv
-    argc = len(argv)
-    total = 0
-    for i in range(1, argc):
-        total += int(argv[i])
-    print("{}".format(total))
+    import fnmatch
+    pyc_path = "hidden_4.pyc"
+    attribute_list = dir(pyc_path);
+    for element in attribute_list:
+        if not fnmatch.fnmatch(element,'__*'):
+            print(element)
