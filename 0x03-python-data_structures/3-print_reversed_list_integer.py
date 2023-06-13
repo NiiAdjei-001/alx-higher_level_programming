@@ -11,4 +11,4 @@ def print_reversed_list_integer(my_list=[]):
     size = len(my_list)
     if size > 0:
         for idx in range(0, size):
-            print("{:d}".format(my_list[size-1-index]))
+            print("{:d}".format(my_list[size-1-idx]))
