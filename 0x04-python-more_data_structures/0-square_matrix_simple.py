@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 def square_matrix_simple(matrix=[]):
     """Squares the values of a 2 dimensional matrix
 
