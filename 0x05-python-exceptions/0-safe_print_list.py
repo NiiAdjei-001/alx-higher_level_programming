@@ -9,11 +9,12 @@ def safe_print_list(my_list=[], x=0):
     Returns:
         The returns a list of x elements
     """
-    ite = 0
+    counter = 0
     try:
-        for ite in range(x):
-            print("{}".format(my_list[ite]), end="")
+        for i in range(x):
+            print("{}".format(my_list[i]), end="")
+            counter += 1
         print("{}".format(""))
     except Exception:
         print("{}".format(""))
-    return ite
+    return counter
