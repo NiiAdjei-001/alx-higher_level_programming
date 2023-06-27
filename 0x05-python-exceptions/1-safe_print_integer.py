@@ -9,7 +9,7 @@ def safe_print_integer(value):
         The returns True if element is an Integer else False
     """
     state = False
-    try: 
+    try:
         print("{:d}".format(value))
         return True
     except ValueError:
