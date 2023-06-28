@@ -1,7 +1,9 @@
 #!/usr/bin/python3
-"""Square Module File
+"""This module defines square class
     This Module contains code to generate a square object
 """
+
+
 class Square:
     """ Creates a square object
     """
