@@ -1,3 +1,7 @@
 #!/usr/bin/python3
 class Square:
-    pass
+    """ Creates a square object
+
+    """
+    def __init__(self):
+        pass
