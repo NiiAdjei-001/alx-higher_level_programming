@@ -15,12 +15,13 @@ class Square:
                 size: length of the square
         """
         try:
-            self.__size = size
-            if type(self.__size) != int:
+            if type(size) != int:
                 raise TypeError
-            if self.__size < 0:
+            if size < 0:
                 raise ValueError
         except TypeError:
             print("size must be an integer")
         except ValueError:
             print("size must be >= 0")
+        else:
+            self.__size = size
