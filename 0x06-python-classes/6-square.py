@@ -98,7 +98,7 @@ class Square:
         if self.__size == 0:
             print()
         else:
-            # print("\n" * self.position[1], end="")
+            print("\n" * self.position[1], end="")
             for row in range(0, self.__size):
                 for col in range(0, self.__size + self.__position[0]):
                     if col < self.__position[0]:
