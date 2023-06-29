@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 """This module defines a square class
 """
-__type_err_mes_size = "size must be an integer"
-__value_err_mes_size = "size must be >= 0"
-__type_err_mes_position = "position must be a tuple of 2 positive integers"
+type_err_mes_size = "size must be an integer"
+value_err_mes_size = "size must be >= 0"
+type_err_mes_position = "position must be a tuple of 2 positive integers"
 
 
 class Square:
@@ -21,10 +21,14 @@ class Square:
             raise TypeError(__type_err_mes_size)
         if size < 0:
             raise ValueError(__value_err_mes_size)
+        if not (type(position) == tuple):
+            raise TypeError(type_err_mes_position)
+        if len(position) != 2:
+            raise TypeError(type_err_mes_position)
         if not ((type(position[0]) == int) and (type(position[1]) == int)):
-            raise TypeError(__type_err_mes_position)
+            raise TypeError(type_err_mes_position)
         if ((position[0] < 0) or (position[1] < 0)):
-            raise TypeError(__type_err_mes_position)
+            raise TypeError(type_err_mes_position)
         self.__size = size
         self.__position = position
 
