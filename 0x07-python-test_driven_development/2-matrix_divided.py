@@ -28,8 +28,8 @@ def matrix_divided(matrix, div):
         for c in range(len(matrix[r])):
             if not (type(matrix[r][c]) in [int, float]):
                 raise TypeError(
-                        "{}{}".format("matrix must be a matrix "),
-                        "(list of lists) of integers/floats")
-            temp.append(matrix[r][c]/div)
+                        "{}{}".format("matrix must be a matrix ",
+                        "(list of lists) of integers/floats"))
+            temp.append(round(matrix[r][c]/div, 2))
         result.append(temp)
     return result
