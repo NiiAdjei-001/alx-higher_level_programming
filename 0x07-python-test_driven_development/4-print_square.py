@@ -16,4 +16,4 @@ def print_square(size):
     for r in range(size):
         for c in range(size):
             print("#", end="")
-        print("", end="") if r == (size - 1) else print("")
+        print("")
