@@ -23,6 +23,11 @@ Now use it:
 		...
 	TypeError: first_name must be a string
 
+	>>> say_my_name("John", -2)
+        Traceback (most recent call last):
+                ...
+        TypeError: last_name must be a string
+
    # Wrong Test Case
 	>>> say_my_name(["Gate"],"")
 	Traceback (most recent call last):
@@ -32,3 +37,9 @@ Now use it:
    # Blank Test Case
 	>>> say_my_name("","Doe")
 	My name is  Doe
+
+	>>> say_my_name("John","")
+        My name is John 
+
+	>>> say_my_name("","")
+	My name is  
