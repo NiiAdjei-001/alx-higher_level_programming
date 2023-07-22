@@ -79,7 +79,7 @@ class Rectangle:
                 buf += "#"
             buf += "\n"
             return buf[0:-1]
-    
+
     def __str__(self):
         """Returns a square object
         """
