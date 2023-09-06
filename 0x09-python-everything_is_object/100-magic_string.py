@@ -1,5 +1,11 @@
 #!/usr/bin/python3
-l = []
+"""Magic String Function Module"""
+
+
+ls = []
+
+
 def magic_string():
-    l.append('BestSchool') if len(l) == 0 else l.append(', BestSchool')
-    return ''.join(l)
+    """Magic String Function"""
+    ls.append('BestSchool') if len(ls) == 0 else ls.append(', BestSchool')
+    return ''.join(ls)
