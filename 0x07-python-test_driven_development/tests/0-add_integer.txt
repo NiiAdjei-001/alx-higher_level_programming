@@ -1,0 +1,55 @@
+The ``0-add_integer`` module
+===============================
+
+Using ``add_integer``
+-------------------------------
+
+This is a 0-add_integer text file in reStructuredText format.
+First import ``add_integer`` from ``0-add_integer`` module:
+	# >>> from `0-add_integer` import add_integer
+	# >>> use importlib
+	# >>> add_integer = importlib.import_module('0-add_integer').add_integer
+	>>> import sys
+	>>> sys.path.append('..')
+	>>> add_integer = __import__('0-add_integer').add_integer 	
+
+Now use it:
+	# Valid Test Case 
+	>>> add_integer(10)
+	108
+
+	>>> add_integer(10,20)
+	30
+
+	>>> add_integer(10, -20)
+	-10
+
+	>>> add_integer(10.10, 20)
+	30
+
+	>>> add_integer(10, 20.20)
+	30
+	
+	# Invalid Test Case
+	>>> add_integer("School", 56)
+	Traceback (most recent call last):
+		...
+	TypeError: a must be an integer
+	
+	>>> add_integer(56, "School")
+        Traceback (most recent call last):
+                ...
+        TypeError: b must be an integer
+	
+
+	# Wrong Test Case
+	>>> add_integer([1, 2, 3], 10)
+	Traceback (most recent call last):
+                ...
+        TypeError: a must be an integer
+
+	# Blank Test Case
+	>>> add_integer(10,)
+	108
+	
+
