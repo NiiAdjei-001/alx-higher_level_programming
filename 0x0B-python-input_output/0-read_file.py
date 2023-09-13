@@ -6,5 +6,8 @@
 def read_file(filename=""):
     """Read File and print to stdout
     """
-    with open(filename, 'r', encoding='utf-8') as _file:
-        print(_file.read())
+    try:
+        with open(filename, 'r', encoding='utf-8') as file_reader:
+            print(file_reader.read())
+    except Exception:
+        pass
