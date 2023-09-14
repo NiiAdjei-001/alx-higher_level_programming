@@ -8,7 +8,7 @@ import json
 
 def save_to_json_file(my_obj, filename):
     """Saves an object to a JSON file
-        
+
         Args:
             my_obj: object
             filename: file name
