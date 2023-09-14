@@ -26,3 +26,8 @@ class Student:
         # print("python obj: " + str(self.__dict__))
         # print("json_obj: " + str(json_string))
         return json_string
+
+    def reload_from_json(self, json):
+        for key, value in json.items():
+            # print("key: {} value: {}".format(key, value))
+            setattr(self, key, value)
