@@ -1,4 +1,4 @@
-#!/urs/bin/python3
+#!/usr/bin/python3
 """Student Module
 """
 
@@ -14,13 +14,13 @@ class Student:
         self.last_name = last_name
         self.age = age
 
-    def to_json(self, attr=None):
+    def to_json(self, attrs=None):
         """Convert class to JSON string
         """
-        if attr is None:
+        if attrs is None:
             return self.__dict__
         json_string = dict(self.__dict__)
-        for key in attr:
+        for key in attrs:
             if key in json_string.keys():
                 del json_string[key]
         # print("python obj: " + str(self.__dict__))
