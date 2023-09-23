@@ -11,6 +11,7 @@ class Rectangle(Base):
     """
 
     def __init__(self, width, height, x=0, y=0, id=None):
+        super(Rectangle, self).__init__(id)
         self.__width = width
         self.__height = height
         self.__x = x
@@ -71,3 +72,22 @@ class Rectangle(Base):
         if value < 0:
             raise ValueError("y must be >= 0")
         self.__y = value
+
+    def area(self):
+        """Gets the area if the rectangle"""
+        return self.__width * self.__height
+
+    def display(self):
+        """Displays the rectangle image"""
+        for h in range(self.__height):
+            for w in range(self.__width):
+                print("#", end="")
+            print()
+
+    def __str__(self):
+        """To string method"""
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id,
+                                                       self.__x,
+                                                       self.__y,
+                                                       self.__width,
+                                                       self.__height)
