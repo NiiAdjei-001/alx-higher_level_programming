@@ -1,7 +1,5 @@
--- Searches for all cities of california
-SELECT id, name 
+-- Searches for all cities within the state  of california
+SELECT cities.id, cities.name 
 FROM cities
-WHERE state_id = (
-	SELECT id FROM states WHERE name = 'Carlifonia'
-)
-ORDER BY id ASC;
+WHERE cities.state_id = (SELECT states.id FROM states WHERE states.name = 'California')
+ORDER BY cities.id ASC;
