@@ -1,7 +1,7 @@
 -- Show a list of genres and number of shows under such genres.
 SELECT 
-    tv_genres.name as 'genre', 
-    COUNT(tv_genres.name) as 'number_of_shows'
+    tv_genres.name AS 'genre', 
+    COUNT(tv_genres.name) AS 'number_of_shows'
 FROM 
     tv_genres
 INNER JOIN 
