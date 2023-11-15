@@ -112,3 +112,16 @@ class Rectangle(Base):
                                                        self.__y,
                                                        self.__width,
                                                        self.__height)
+
+    def update(self, *args):
+        """Update with *args => (id, width, height, x, y)"""
+        if (args.__len__() > 0):
+            self.id = args[0]
+        if (args.__len__() > 1):
+            self.width = args[1]
+        if (args.__len__() > 2):
+            self.height = args[2]
+        if (args.__len__() > 3):
+            self.x = args[3]
+        if (args.__len__() > 4):
+            self.y = args[4]
