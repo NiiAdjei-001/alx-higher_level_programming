@@ -95,10 +95,15 @@ class Rectangle(Base):
 
     def display(self):
         """Displays the rectangle image"""
-        for h in range(self.__height):
-            for w in range(self.__width):
-                print("#", end="")
+        row = ''
+        for xpos in range(self.__x):  # emulate display position at x
+            row += ' '
+        for w in range(self.__width):  # emulate display of width
+            row += '#'
+        for ypos in range(self.__y):  # emulate display position at y
             print()
+        for h in range(self.__height):  # emulate display of height
+            print(row)
 
     def __str__(self):
         """To string method"""
