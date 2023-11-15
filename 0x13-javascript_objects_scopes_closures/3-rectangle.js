@@ -7,7 +7,7 @@ class Rectangle {
     }
   }
 
-  print = function () {
+  print () {
     let col = '';
     for (let c = 0; c < this.width; c++) {
       col += 'X';
@@ -15,7 +15,7 @@ class Rectangle {
     for (let r = 0; r < this.height; r++) {
       console.log(col);
     }
-  };
+  }
 }
 
 module.exports = Rectangle;
