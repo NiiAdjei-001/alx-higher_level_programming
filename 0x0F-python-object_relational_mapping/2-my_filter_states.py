@@ -18,10 +18,10 @@ if argv.__len__() == 5:
     search_n = argv[4]
     db = MySQLdb.connect(**ALX_DB_DETAIL)
     cursor = db.cursor()
-    query = f"""SELECT id, name
+    query = """SELECT id, name
             FROM states
-            WHERE name = '{search_n}'
-            ORDER BY id ASC;"""
+            WHERE name = '{}'
+            ORDER BY id ASC;""".format(search_n)
     cursor.execute(query)
     records = cursor.fetchall()
     for record in records:
