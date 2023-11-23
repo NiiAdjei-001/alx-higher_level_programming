@@ -20,7 +20,7 @@ if argv.__len__() == 5:
     cursor = db.cursor()
     query = f"""SELECT id, name
             FROM states
-            WHERE name = %s
+            WHERE BINARY name = %s
             ORDER BY id ASC;"""
     cursor.execute(query, (search_n,))
     records = cursor.fetchall()

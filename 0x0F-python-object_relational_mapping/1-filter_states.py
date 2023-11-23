@@ -17,7 +17,10 @@ if argv.__len__() == 4:
     }
     db = MySQLdb.connect(**ALX_DB_DETAIL)
     cursor = db.cursor()
-    query = "SELECT id, name FROM states WHERE BINARY name LIKE 'N%' ORDER BY id ASC;"
+    query = """SELECT id, name
+            FROM states
+            WHERE BINARY name LIKE 'N%'
+            ORDER BY id ASC;"""
     cursor.execute(query)
     records = cursor.fetchall()
     for record in records:
