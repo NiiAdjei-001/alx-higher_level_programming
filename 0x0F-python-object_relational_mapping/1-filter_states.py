@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Select States Module
+Filter States Module
 """
 import MySQLdb
 import sys
@@ -17,7 +17,7 @@ if argv.__len__() == 4:
     }
     db = MySQLdb.connect(**ALX_DB_DETAIL)
     cursor = db.cursor()
-    query = "SELECT id, name FROM states ORDER BY id ASC;"
+    query = "SELECT id, name FROM states WHERE name LIKE 'N%' ORDER BY id ASC;"
     cursor.execute(query)
     records = cursor.fetchall()
     for record in records:
