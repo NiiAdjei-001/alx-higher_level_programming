@@ -19,7 +19,7 @@ ALX_DB_DETAIL = {
     'passwd': "root",
     'db': "hbtn_0e_0_usa"
 }
-db =  MySQLdb.connect(**DB_DETAIL)
+db = MySQLdb.connect(**DB_DETAIL)
 cursor = db.cursor()
 query = "SELECT id, name FROM states;"
 cursor.execute(query)
