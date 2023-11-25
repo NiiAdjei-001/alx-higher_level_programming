@@ -25,7 +25,7 @@ if argv.__len__() == 5:
             ORDER BY cities.id ASC;"""
     cursor.execute(query, (search_n,))
     records = cursor.fetchall()
-    my_list = [ x[0] for x in records]
+    my_list = [x[0] for x in records]
     print(", ".join(my_list))
     """ record_count = cursor.rowcount
     for i in range(0, record_count):
