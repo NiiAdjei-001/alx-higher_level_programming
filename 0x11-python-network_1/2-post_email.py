@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-"""Script to display X-Request-Id of an http response
+"""Script to post an email
+    argv[1] - url
+    argv[2] - email
 """
 from urllib import parse, request
 import sys
