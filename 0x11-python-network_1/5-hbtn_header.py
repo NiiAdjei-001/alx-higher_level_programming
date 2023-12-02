@@ -9,5 +9,8 @@ if __name__ == "__main__":
     argv = sys.argv
 
     if argv.__len__() >= 2:
-        res = requests.get(argv[1])
-        print('{}'.format(res.headers['X-Request-Id']))
+        try:
+            res = requests.get(argv[1])
+            print('{}'.format(res.headers['X-Request-Id']))
+        except:
+            pass
