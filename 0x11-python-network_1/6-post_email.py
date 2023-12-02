@@ -3,7 +3,6 @@
     argv[1] - url
     argv[2] - email
 """
-from urllib import parse, request
 import requests
 import sys
 
