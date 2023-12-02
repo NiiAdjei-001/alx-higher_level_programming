@@ -1,13 +1,13 @@
 #!/usr/bin/python3
 """
 """
-from urllib import request
+import urllib
 
 
 if __name__ == "__main__":
     url = "https://alx-intranet.hbtn.io/status"
 
-    with request.urlopen(url) as response:
+    with urllib.request.urlopen(url) as response:
         html = response.read()
         print('Body Response:')
         print('\t- type: {}'.format(type(html)))
