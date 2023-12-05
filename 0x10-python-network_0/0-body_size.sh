@@ -1,3 +1,3 @@
 #!/bin/bash
 # displays http body size
-curl -s -I "$1" | grep "Content-Length"
+curl -s -i "$1" | grep "Content-Length"
