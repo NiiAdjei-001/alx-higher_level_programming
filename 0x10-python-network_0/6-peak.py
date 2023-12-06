@@ -7,7 +7,7 @@ def find_peak(list_of_integers):
     peak = -9223372036854775807
     if list_of_integers is None:
         return None
-    for val in list_of_integers:
+    for val in set(list_of_integers):
         if val > peak:
             peak = val
     return peak
