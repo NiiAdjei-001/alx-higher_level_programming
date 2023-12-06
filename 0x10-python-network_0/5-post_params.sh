@@ -1,3 +1,3 @@
 #!/bin/bash
 # Send a POST HTTP Request to a link. param: { email = ...; subject = ...}
-curl -d 'email=test@gmail.com' -d 'subject=I will always be here for PLD' -f -s "$1"
+curl -F 'email=test@gmail.com;type=text/email' -F 'subject=I will always be here for PLD;type=text/plain' -f -s "$1"
