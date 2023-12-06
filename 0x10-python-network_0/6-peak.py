@@ -1,10 +1,10 @@
 #!/usr/bin/python3
 """Find the peak module"""
-import sys
 
 
 def find_peak(list_of_integers):
-    peak = -1 * sys.maxsize
+    """Finds the peak value of a list of integers`"""
+    peak = -9223372036854775807
     if list_of_integers is None:
         return None
     for val in list_of_integers:
