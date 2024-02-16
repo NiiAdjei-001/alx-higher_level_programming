@@ -36,3 +36,13 @@ class MaxIntegerTest(unittest.TestCase):
         sample_list = []
         self.assertIsNone(max_integer(sample_list),
                           "Function works for empty list")
+    
+    def test_list_has_single_value(self):
+        sample_list = [1]
+        self.assertEqual(max_integer(sample_list), 1,
+                          "Function works for single value list")
+        
+    def test_list_has_asc_ord_value(self):
+        sample_list = [1, 2, 3, 4, 5, 6]
+        self.assertEqual(max_integer(sample_list), 6,
+                          "Function works for asc ord value list")
