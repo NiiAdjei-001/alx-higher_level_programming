@@ -115,7 +115,7 @@ class Rectangle(Base):
 
     def update(self, *args, **kwargs):
         """Update with *args => (id, width, height, x, y)"""
-        if (args):
+        if (args and args is not None):
             if (args.__len__() > 0):
                 self.id = args[0]
             if (args.__len__() > 1):
@@ -137,3 +137,14 @@ class Rectangle(Base):
                 self.x = kwargs['x']
             if 'y' in kwargs.keys():
                 self.y = kwargs['y']
+
+    def to_dictionary(self):
+        """return a dictionary object of class instance"""
+        dictionary = dict(
+            id=self.id,
+            width=self.width,
+            height=self.height,
+            x=self.x,
+            y=self.y
+        )
+        return dictionary
