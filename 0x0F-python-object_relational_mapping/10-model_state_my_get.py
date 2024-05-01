@@ -20,15 +20,6 @@ if __name__ == "__main__":
         Session.configure(bind=engine)
         session = Session()
 
-        #record = session.query(State) \
-        #    .filter(State.name == argv[4]) \
-        #    .first()
-        #if record:
-        #    print("{}".format(record.id))
-        #else:
-        #    print("Not found")
-        #session.close()
-
         stmt = select(State.id).where(State.name == argv[4])
         record = session.execute(stmt).first()
         if record:
@@ -36,4 +27,3 @@ if __name__ == "__main__":
         else:
             print("Not found")
         session.close()
-        
