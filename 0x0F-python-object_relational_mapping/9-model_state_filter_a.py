@@ -20,7 +20,10 @@ if __name__ == "__main__":
         Session.configure(bind=engine)
         session = Session()
 
-        records = session.query(State).filter(State.name.like('%a%')).order_by(State.id.asc()).all()
+        records = session.query(State) \
+            .filter(State.name.like('%a%')) \
+            .order_by(State.id.asc()) \
+            .all()
         for record in records:
             print("{}: {}".format(record.id, record.name))
         session.close()
