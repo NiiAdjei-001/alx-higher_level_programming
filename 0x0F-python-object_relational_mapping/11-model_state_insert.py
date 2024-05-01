@@ -9,7 +9,7 @@ import sys
 
 argv = sys.argv
 if __name__ == "__main__":
-    if argv.__len__() >= 5:
+    if argv.__len__() >= 4:
         url = 'mysql://{}:{}@{}:{}/{}'.format(argv[1],
                                               argv[2],
                                               'localhost',
@@ -20,9 +20,9 @@ if __name__ == "__main__":
         Session.configure(bind=engine)
         session = Session()
 
-        record = session.query(State).where(State.name == argv[4]).first()
-        if record:
-            print("{}".format(record.id))
-        else:
-            print("Not found")
+        new_state = State(name='Louisiana')
+        session.add(new_state)
+        id, = session.query(State.id).where(State.name == new_state.name).first()
+        print(id)
+        session.commit()
         session.close()
