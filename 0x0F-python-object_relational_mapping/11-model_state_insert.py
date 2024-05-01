@@ -22,7 +22,8 @@ if __name__ == "__main__":
 
         new_state = State(name='Louisiana')
         session.add(new_state)
-        id, = session.query(State.id).where(State.name == new_state.name).first()
+        id, = session.query(State.id) \
+            .where(State.name == new_state.name).first()
         print(id)
         session.commit()
         session.close()
