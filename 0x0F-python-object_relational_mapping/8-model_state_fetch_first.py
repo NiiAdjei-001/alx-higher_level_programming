@@ -19,7 +19,7 @@ if __name__ == "__main__":
         Session.configure(bind=engine)
         session = Session()
 
-        record = session.query(State).limit(1)
+        record = session.query(State).limit(1).first()
         if record:
             print("{}: {}".format(record[0].id, record[0].name))
         else:
