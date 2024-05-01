@@ -19,7 +19,7 @@ if __name__ == "__main__":
         Session.configure(bind=engine)
         session = Session()
 
-        record = session.query(State).first()
+        record = session.query(State).order_by("id").first()
         if record:
             print("{}: {}".format(record.id, record.name))
         else:
