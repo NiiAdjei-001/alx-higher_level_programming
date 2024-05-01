@@ -20,8 +20,8 @@ if __name__ == "__main__":
         session = Session()
 
         record = session.query(State) \
-            .order_by(State.id.asc()) \
-            .limit(1).first()
+            .limit(1) \
+            .first()
         if record:
             print("{}: {}".format(record.id, record.name))
         else:
