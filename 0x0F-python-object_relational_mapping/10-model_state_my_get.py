@@ -20,8 +20,7 @@ if __name__ == "__main__":
         Session.configure(bind=engine)
         session = Session()
 
-        stmt = select(State.id).where(State.name == argv[4])
-        record = session.execute(stmt).first()
+        record = session.query(State).where(State.name == argv[4]).first()
         if record:
             print("{}".format(record.id))
         else:
