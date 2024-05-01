@@ -19,9 +19,10 @@ if __name__ == "__main__":
         Session.configure(bind=engine)
         session = Session()
 
-        record = session.query(State).limit(1).first()
-        if record:
-            print("{}: {}".format(record.id, record.name))
-        else:
-            print("Nothing")
+        for row in session.query(State)[0:1]:
+            if row:
+                print("{}: {}".format(row.id, row.name))
+                session.close()
+                sys.exit(0)
+        print("Nothing")
         session.close()
