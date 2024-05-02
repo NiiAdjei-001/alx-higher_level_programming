@@ -19,4 +19,5 @@ class City(Base):
         self.name = name
 
     def __str__(self):
-        return f"<City (id={self.id}, name={self.name}, state_id={self.state_id})>"
+        return "<City (id={}, name={}, state_id={})>" \
+            .format(self.id, self.name, self.state_id)
