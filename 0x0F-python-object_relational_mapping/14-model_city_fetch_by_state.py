@@ -1,9 +1,10 @@
 #!/usr/bin/python3
-""" Model State - Update States Where id is 2
+""" Model State - Delete States Contain 'a'
 """
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from model_state import Base, State
+from model_city import City
 import sys
 
 
@@ -20,9 +21,9 @@ if __name__ == "__main__":
         Session.configure(bind=engine)
         session = Session()
 
-        state = session.query(State) \
-            .where(State.id == 2).first()
-        if state:
-            state.name = "New Mexico"
-        session.commit()
+        records = session.query(State.name, City.id, City.name) \
+            .outerjoin(City).filter(State.id == City.state_id) \
+            .order_by(City.id).all()
+        for state, city_id, city_name in records:
+            print("{}: ({}) {}".format(state, city_id, city_name))
         session.close()

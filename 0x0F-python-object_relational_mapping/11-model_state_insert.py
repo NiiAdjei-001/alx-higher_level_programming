@@ -1,7 +1,7 @@
 #!/usr/bin/python3
-""" Model State Fetch All States Contain 'a'
+""" Model State - Insert States With name = 'Louisiana'
 """
-from sqlalchemy import create_engine, select
+from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from model_state import Base, State
 import sys
