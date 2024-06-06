@@ -1,14 +1,13 @@
 #!/usr/bin/node
 const fs = require('fs');
-const argv = process.argv;
-let argc = 0;
-argv.forEach(element => { argc++; });
+const { argv } = require('process');
+const argc = argv.length;
 
-const exec = function(err, data){
-    if (err) throw err;
-    console.log (data);
-}
+const exec = function (err, data) {
+  if (err) throw err;
+  console.log(data);
+};
 
-if (argc >= 3){
-    fs.readFile(argv[2], 'utf-8', exec)
+if (argc >= 3) {
+  fs.readFile(argv[2], 'utf-8', exec);
 }
